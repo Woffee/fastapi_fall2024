@@ -56,7 +56,14 @@ Click "authorize" input username: `admin` password: `secret`
 
 5. Goto http://localhost:5050 to connect and manage the database.
 
-Fill in the following information and ensure they match the ones in the `docker-compose.yml` file.
+The following information must match the ones in the `docker-compose.yml` file.
+
+Login:
+
+- Email address / Username: `admin@example.com`
+- Passwird: `adminpassword`
+
+When add new server:
 
 - Host name/address: `postgres`
 - Port: `5432`
