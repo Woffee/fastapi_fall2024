@@ -1,21 +1,40 @@
 # Instructor Videos
-1.  https://youtu.be/dgMCSND2FQw
+
+1. [Intro to Database Programming](https://youtu.be/dgMCSND2FQw)
 
 
 # Libraries
-* https://www.sqlalchemy.org/ This is to handle the database
-* https://docs.pydantic.dev/latest/  this is to handle the validation json serialization and deserialization>
-* https://fastapi.tiangolo.com/ This is the api
-* https://alembic.sqlalchemy.org/en/latest/index.html The database migrations
+
+* [SQLAlchemy](https://www.sqlalchemy.org/) This is to handle the database
+* [Pydantic](https://docs.pydantic.dev/latest/)  This is to handle the validation json serialization and deserialization.
+* [FastAPI](https://fastapi.tiangolo.com/) This is the web framework for building APIs.
+
 
 
 # Commands
 
-1. docker compose up --build
-2. docker compose exec fastapi pytest
-    * docker compose exec fastapi pytest tests/test_services/test_user_service.py::test_list_users
-3. Need to apply database migrationss: docker compose exec fastapi alembic upgrade head
-4. Creating database migration: docker compose exec fastapi alembic revision --autogenerate -m 'added admin'
+1. Start and build a multi-container application:
+
+`docker compose up --build`
+
+
+2. Run `pytest` inside the containers:
+
+Run all tests:
+
+`docker compose exec fastapi pytest`
+
+Run a single test:
+
+`docker compose exec fastapi pytest tests/test_services/test_user_service.py::test_list_users`
+
+3. Need to apply database migrations:
+
+`docker compose exec fastapi alembic upgrade head`
+
+4. Creating database migration:
+
+`docker compose exec fastapi alembic revision --autogenerate -m 'added admin'`
 
 # Introduction to Database Testing and Asynchronous Programming
 
@@ -107,9 +126,3 @@ With the testing setup in place, we can now write tests to verify the behavior o
   - Verify that the application can recover from database errors and maintain a stable state.
 
 By following these testing procedures and utilizing the provided testing setup, we can ensure that our FastAPI application interacts with the database correctly, handles asynchronous operations efficiently, and maintains data integrity.
-
-## Conclusion
-
-Testing database interactions in a FastAPI application requires careful setup and consideration of asynchronous programming concepts. By leveraging fixtures, database initialization, session management, and asynchronous programming with SQLAlchemy and FastAPI testing, we can create a robust testing environment that allows us to verify the correctness and reliability of our application's database operations.
-
-Remember to write comprehensive tests that cover various scenarios, including positive and negative cases, edge cases, and error handling. By doing so, we
