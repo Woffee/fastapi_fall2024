@@ -5,9 +5,10 @@
 
 # Libraries
 
-* [SQLAlchemy](https://www.sqlalchemy.org/) This is to handle the database
-* [Pydantic](https://docs.pydantic.dev/latest/)  This is to handle the validation json serialization and deserialization.
 * [FastAPI](https://fastapi.tiangolo.com/) This is the web framework for building APIs.
+* [Pydantic](https://docs.pydantic.dev/latest/)  This is to handle the validation json serialization and deserialization.
+* [SQLAlchemy](https://www.sqlalchemy.org/) This is to handle the database.
+* [Alembic](https://alembic.sqlalchemy.org/en/latest/index.html) This is to handle database migrations.
 
 
 
