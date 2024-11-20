@@ -10,6 +10,23 @@
 * [SQLAlchemy](https://www.sqlalchemy.org/) This is to handle the database.
 * [Alembic](https://alembic.sqlalchemy.org/en/latest/index.html) This is to handle database migrations.
 
+# Project structure
+
+    ├── alembic/            # Contains database migration scripts and configurations managed by Alembic.
+    ├── app/                # Core application logic and modules.
+    │   ├── database.py     # Database connection setup and initialization.
+    │   ├── dependencies.py # Defines dependency injection functions for the app.
+    │   ├── main.py         # The main entry point of the application.
+    │   ├── models/         # Contains ORM models representing database tables.
+    │   ├── routers/        # Defines application routes, organized by features or functionalities.
+    │   ├── schemas/        # Defines Pydantic models for request/response validation and serialization.
+    │   ├── services/       # Contains business logic or service-layer functions for the application.
+    │   └── utils/          # Utility functions and helper modules to support various parts of the app.
+    ├── nginx/              # Configuration files for Nginx.
+    ├── qr_codes/           # A directory for storing generated QR codes or related assets.
+    ├── settings/           # Application configuration settings (environment-specific configurations).
+    ├── tests/              # Test cases for the application.
+    └── venv/               # Virtual environment directory for Python dependencies.
 
 
 # Commands
