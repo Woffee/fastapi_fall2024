@@ -46,15 +46,19 @@ Run a single test:
 
 `docker compose exec fastapi pytest tests/test_services/test_user_service.py::test_list_users`
 
-3. Need to apply database migrations:
+3. Creating database migration:
+
+`docker compose exec fastapi alembic revision --autogenerate -m 'added admin'`
+
+4. Need to apply database migrations:
 
 `docker compose exec fastapi alembic upgrade head`
 
-4. Goto http://localhost/docs to view openapi spec documentation
+5. Goto http://localhost/docs to view openapi spec documentation
 
 Click "authorize" input username: `admin` password: `secret`
 
-5. Goto http://localhost:5050 to connect and manage the database.
+6. Goto http://localhost:5050 to connect and manage the database.
 
 The following information must match the ones in the `docker-compose.yml` file.
 
@@ -71,9 +75,6 @@ When add new server:
 - Username: `user`
 - Password: `password`
 
-6. (Optional) Creating database migration:
-
-`docker compose exec fastapi alembic revision --autogenerate -m 'added admin'`
 
 # Introduction to Database Testing and Asynchronous Programming
 
